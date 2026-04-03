@@ -1,13 +1,37 @@
 # core-legacy-systems
 
-Hands-on systems progression repo covering allocator patterns, memory safety techniques, and performance tuning.
+Hands-on systems progression repository focused on allocator design, memory safety patterns, and performance tuning.
 
-## Layout
-- `v1_foundations_cpp/` base data structures and pointer discipline
-- `v2_memory_patterns/` arenas, pools, ownership boundaries
-- `v3_performance_tuning/` profiling, cache-aware improvements
+## Why This Exists
 
-## Milestones
-- `v2008-foundations`
-- `v2012-refactor`
-- `v2018-modernization`
+This repo demonstrates systems fundamentals through staged evolution rather than artificial commit history.
+
+## Architecture
+
+```mermaid
+flowchart LR
+  A["v1 foundations"] --> B["v2 memory patterns"]
+  B --> C["v3 performance tuning"]
+  C --> D["benchmarks/tests"]
+```
+
+## Project Layout
+
+- `v1_foundations_cpp/` baseline structures
+- `v2_memory_patterns/` ownership + allocation patterns
+- `v3_performance_tuning/` optimization experiments
+- `src/allocators/` allocator primitives
+- `tests/` native test binaries
+- `docs/` architecture + ADRs
+
+## Usage
+
+```bash
+make test
+```
+
+## Roadmap
+
+- Add pool allocator and fragmentation metrics
+- Add benchmark harness for allocator comparisons
+- Add cache-locality experiments
